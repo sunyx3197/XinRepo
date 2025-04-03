@@ -4,25 +4,24 @@
 
 ## 简介
 
-此项目旨在复现论文《Deep Enhancement-Object Features Fusion for Low-light Object Detection》。该论文的详细信息和链接如下：
-
-![论文示意图](images/paper_illustration.png)
+此项目旨在复现论文《Deep Enhancement-Object Features Fusion for Low-light Object Detection》
 
 - 论文链接: [https://dl.acm.org/doi/10.1145/3551626.3564947]
 
-## 数据集
+## ExDark数据集
 
 您可以通过以下链接下载所需的数据集：
 
 - 数据集下载链接:[https://aistudio.baidu.com/datasetdetail/129450]
-
+- 原地址为：[https://github.com/cs-chan/Exclusively-Dark-Image-Dataset]
+- 数据集简介：[https://zhuanlan.zhihu.com/p/472237704]
 请确保下载并解压数据集到项目的指定目录以便正常运行程序。
 
 ## 预训练权重
 
-预训练权重文件已包含在代码仓库中，您可以在以下位置找到它们：
+DLN模型，epoch=500，预训练权重文件已包含在代码仓库中，您可以在以下位置找到它们：
 
-- `path/to/pretrained/weights/`
+- `DLN_yolov5/DLN_master/models`
 
 yolov5预训练权重请到官网下载。
 
