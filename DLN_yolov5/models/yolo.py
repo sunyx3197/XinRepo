@@ -253,7 +253,7 @@ class DetectionModel(BaseModel):
         #                                创建DLN模型实例                                    #
         # ---------------------------------------------------------------------------------#
 
-        '''
+        
         self.dln_model = DLN()
         self.dln_model = torch.nn.DataParallel(self.dln_model)
 
@@ -271,7 +271,7 @@ class DetectionModel(BaseModel):
         self.dln_model.cuda()
         self.dln_conv1.cuda()
         self.dln_conv2.cuda()
-        '''
+        
         # Build strides, anchors
         m = self.model[-1]  # Detect()
         if isinstance(m, (Detect, Segment)):
@@ -302,14 +302,14 @@ class DetectionModel(BaseModel):
     #重写父类的前向传播函数
     def _forward_once(self, x, profile=False, visualize=False):
         """Performs a forward pass on the YOLOv5 model, enabling profiling and feature visualization options."""
-        '''
+        
         # 禁用梯度计算
         with torch.no_grad():
             dln_output = self.dln_model(x)  # 假设self.dln_model是DLN网络
 
         # 使用卷积层来匹配YOLOv5第十九层的维度
         dln_output = self.dln_conv1(dln_output)  # self.dln_conv是额外的卷积层'
-        '''
+        
         
         y, dt = [], []  # outputs
 
